@@ -16,6 +16,7 @@ public class PTra01_03 {
 
 
 		// ★ 変数 i に入っている値を出力してください
+		int i = 10;
 		System.out.println(i);
 
 	}

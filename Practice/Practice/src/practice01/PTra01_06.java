@@ -17,6 +17,7 @@ public class PTra01_06 {
 
 		// ★ 変数 str の中身を出力してください
 
-
+		String str ="渡辺　知樹";
+			System.out.println(str);
 	}
 }

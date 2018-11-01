@@ -16,7 +16,7 @@ public class PTra01_05 {
 
 
 		// ★ 変数 c の中身を出力してください
-
-
+		char c = 'R';
+				System.out.println(c);
 	}
 }
