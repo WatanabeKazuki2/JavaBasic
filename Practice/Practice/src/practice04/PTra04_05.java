@@ -29,6 +29,18 @@ public class PTra04_05 {
 			// ※ コマンドプロンプトで入力された値が、数字ではなかった場合はプログラムがエラーになり、プログラムが終了します
 			int myHand = Integer.parseInt(line);
 
+			if (myHand == 0) {
+				System.out.println("グー！");
+
+
+
+			} else if (myHand == 1) {
+				System.out.println("チョキ！！");
+
+
+			} else {
+				System.out.println("パー！！");
+			}
 			System.out.print("相手の手は・・・・・");
 
 			// 下記の命令を実行すると変数cpuHandに、0以上、変数3未満の数字がランダムで代入されます
@@ -53,13 +65,16 @@ public class PTra04_05 {
 				System.out.println("チョキ！！");
 
 
-
 			} else {
 				System.out.println("パー！！");
-
-
-
 			}
+
+			if(-1==(myHand-cpuHand)) {
+				winFlg = true;
+			}else if(-2==(myHand-cpuHand)){
+				winFlg = true;
+			}
+
 
 		}
 	}
