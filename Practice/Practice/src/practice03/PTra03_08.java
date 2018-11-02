@@ -10,7 +10,7 @@ public class PTra03_08 {
 	public static void main(String[] args) {
 		// 入力型プログラムです。
 		// 下記の命令は、入力型プログラムで必要な記述になります。
-		java.util.Scanner scanner = new java.util.Scanner(System.in);
+		java.util.Scanner Scanner = new java.util.Scanner(System.in);
 
 		System.out.println("1-3を選択してください");
 		System.out.println("------------------------------------------");
@@ -21,7 +21,7 @@ public class PTra03_08 {
 
 		// コマンドプロンプトで入力した数値が変数numに代入されます
 		// ※ コマンドプロンプトで入力された値が、数字ではなかった場合はプログラムがエラーになります
-		int num = scanner.nextInt();
+		int num = Scanner.nextInt();
 
 		int money = 1000;	// 所持金
 
@@ -35,6 +35,21 @@ public class PTra03_08 {
 		 *
 		 * ※ プログラムは何行書いても良いです
 		 */
-
+		switch(num) {
+		case 1:
+			num = 150;
+			break;
+		case 2:
+			num = 160;
+			break;
+		case 3:
+			num = 200;
+			break;
+		default:
+			System.out.println("表示された番号を入れてください");
+			break;
+		}
+		money = money - num;
+		System.out.println(money);
 	}
 }
