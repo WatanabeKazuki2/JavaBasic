@@ -75,7 +75,6 @@ public class PTra04_05 {
 				winFlg = true;
 			}
 
-
 		}
 	}
 }
