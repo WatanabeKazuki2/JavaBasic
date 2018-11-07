@@ -7,11 +7,11 @@ public class Car {
 
 
 	int run() {
-		int num = new java.util.Random().nextInt(15);
 		int k = 0;
+		int num = new java.util.Random().nextInt(15);
 
-		int result = this.gasoline - 1;
-			if( result < 0) {
+		this.gasoline = this.gasoline - 1;
+			if( this.gasoline < 0) {
 				k= -1;
 			}else {
 				k = num + 1;
