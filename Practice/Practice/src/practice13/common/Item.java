@@ -1,15 +1,15 @@
 package practice13.common;
 
 public class Item {
-	String name;
-	int additionalDamage;
+	private String name;
+	private int additionalDamage;
 
 	//getter
 	public String getName() {
 		return this.name ;
 	}
 
-	public int getAdditionalDamage() {
+	public  int getAdditionalDamage() {
 		return this.additionalDamage;
 	}
 
@@ -23,7 +23,7 @@ public class Item {
 	}
 
 	//コンストラクタ
-	Item(String name,int additionalDamage){
+	public Item(String name,int additionalDamage){
 		this.name = name;
 		this.additionalDamage = additionalDamage;
 	}

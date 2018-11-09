@@ -1,24 +1,26 @@
 package practice13.common;
-import practice13.common.Item;
-
-
-
 public class SuperHero extends Hero{
-	Item equipment;
-	public SuperHero(){
-		super(25,10,17);
 
-	}
+	private Item equipment;
 
-	public int attack() {
-		return super.power + this.equipment;
-	}
-
-	public Item getEqipment() {
+		//getter
+	public Item getEquipment() {
 		return this.equipment;
 	}
 
-	public void setEqipment(Item eqipment) {
-		this.equipment = eqipment;
+	//setter
+	public void setEquipment(Item equipment) {
+		this.equipment = equipment;
 	}
+
+	//attackのオーバーライド
+
+
+	public int attack() {
+		int a = super.attack();
+		return a + this.equipment.getAdditionalDamage();
+	}
+
+
+
 }
