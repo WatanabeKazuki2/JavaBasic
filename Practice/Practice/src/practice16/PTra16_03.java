@@ -7,7 +7,6 @@
 package practice16;
 
 public class PTra16_03 {
-
 	/*
 	 * toStringメソッドをオーバーライドしてください
 	 *
@@ -19,6 +18,13 @@ public class PTra16_03 {
 	public static void main(String[] args) {
 
 		// ★ PTra16_03クラスのtoStringメソッドの内容を出力してください
+		Age age = new Age();
+		age.setAge(20);
+
+		String str = age.toString();
+		String str2 = "PTra16_03#toString()の処理";
+
+		System.out.println(str+ System.getProperty("line.separator") + str2);
 
 	}
 }

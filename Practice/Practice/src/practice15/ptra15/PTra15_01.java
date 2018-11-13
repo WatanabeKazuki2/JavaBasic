@@ -24,5 +24,4 @@ public class PTra15_01 {
 			System.out.println(course.getCourseName());
 		}
 	}
-
 }
