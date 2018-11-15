@@ -27,62 +27,54 @@ public class PTra18_04 {
 		 */
 		 ArrayList<Player> array = new ArrayList<>();
 
-		 Player player = new Player();
-	        try(Scanner scanner = new Scanner(new File("file/BestElevenCandidate.csv"))) {
-	            while (scanner.hasNext()) {
-	            	array.add(player);
-	                String line = scanner.nextLine();
-	                String[]str = line.split(",");
-	                player.setPosition(str[0]);
-	                player.setName(str[1]);
-	                player.setCountry(str[2]);
-	                player.setTeam(str[3]);
-	            }
-	        } catch (FileNotFoundException e) {
-	        	System.out.println("ファイルが見つかりません");
-	        }
 
-	        Collections.shuffle(array);
+// ★ ①のArrayListの中からGK1名、DF4名、MF4名, FW2名をランダムで出力してください
 
 
-	        String s = player.toString();
-	        for(int i = 0; i<1; i++) {
-	        	while(true) {
-	        		if(player.getPosition().equals("GK")) {
-	        			System.out.println(s);
-	        			break;
-	        		}
-	        	}
-	        }
+		 try(Scanner scanner = new Scanner(new File("file/BestElevenCandidate.csv"))) {
+			 while (scanner.hasNext()) {
+				 Player player = new Player();
+				 String line = scanner.nextLine();
+				 String[]str = line.split(",");
+				 player.setPosition(str[0]);
+				 player.setName(str[1]);
+				 player.setCountry(str[2]);
+				 player.setTeam(str[3]);
 
-	        for(int j = 0; j<4; j++) {
-	        	while(true) {
-	        		if(player.getPosition().equals("DF")) {
-	        			System.out.println(s);
-	        			break;
-	        		}
-	        	}
-	        }
+				 array.add(player);
+			 }
+		 } catch (FileNotFoundException e) {
+			 System.out.println("ファイルが見つかりません");
+		 }
+		 Collections.shuffle(array);
 
-	        for(int k = 0; k<4; k++) {
-	        	while(true) {
-	        		if(player.getPosition().equals("MF")) {
-	        			System.out.println(s);
-	        			break;
-	        		}
-	        	}
-	        }
+		 int gkCount = 0;
+		 int dfCount = 0;
+		 int mfCount = 0;
+		 int fwCount = 0;
+		 for(Player p : array) {
+			 String s = p.toString();
 
-	        for(int l = 0; l<2; l++) {
-	        	while(true) {
-	        		if(player.getPosition().equals("FW")) {
+				 if(p.getPosition().equals("GK") && gkCount<1) {
+					 System.out.println(s);
+					 gkCount++;
+				 }
 
-	        			System.out.println(s);
-	        			break;
-	        		}
-	        	}
-	        }
+				 if(p.getPosition().equals("DF") && dfCount<4) {
+					 System.out.println(s);
+					 dfCount++;
+				 }
+
+				 if(p.getPosition().equals("MF") && mfCount<4) {
+					 System.out.println(s);
+					 mfCount++;
+				 }
+
+				 if(p.getPosition().equals("FW") && fwCount<2) {
+					 System.out.println(s);
+					 fwCount++;
+				 }
+
+		 }
 	}
-	// ★ ①のArrayListの中からGK1名、DF4名、MF4名, FW2名をランダムで出力してください
-
 }
